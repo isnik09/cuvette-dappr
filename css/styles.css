@@ -1,20 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Inter:wght@100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  font-family: "Inter", sans-serif;
 }
 
 .logo h1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3rem;
+  font-family: "Delius Unicase", cursive;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: rgb(0, 0, 0);
+  padding: 2rem;
+  background-color: #6f6af7;
   color: white;
   position: sticky;
   top: 0;
@@ -22,43 +30,82 @@
 }
 .middle {
   display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
+.downArrow {
+  width: 1.5rem;
+}
 .middle a {
   text-decoration: none;
   color: white;
   padding: 0.5rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.middle a:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-}
 .hamburger img {
   cursor: pointer;
   width: 2rem;
 }
-.searchIcon img {
+.searchBox {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+input {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+input :focus {
+  outline: none;
+}
+.searchIcon {
   width: 1.5rem;
 }
-.socials {
+.more {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*  ////////////END OF NAVBAR //////////*/
+.websiteBody {
+  padding: 8rem 4rem;
   display: flex;
   flex-direction: column;
-  position: -webkit-sticky;
-  position: sticky;
-  right: -50%;
-  top: 50%;
-  margin: auto 0;
+  gap: 3rem;
+}
+
+/* //////////////END OF websiteBody */
+.socials {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: 2%;
+  top: 40%;
   z-index: 10;
   width: fit-content;
+  position: fixed;
+}
+
+.social img {
+  width: 2rem;
+  cursor: pointer;
 }
 
 .social {
-  margin: 1rem;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.66);
   backdrop-filter: blur(3rem);
   color: rgb(0, 0, 0);
   border: 2px solid black;
@@ -67,22 +114,20 @@
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.66);
 }
+
+/* ///////////END OF SOCIAL BUTTONS////////////// */
 
 .hero {
   color: white;
-  padding: 1rem;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1rem;
-  align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .computers img {
   height: 30rem;
+  width: 25rem;
   object-fit: cover;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
@@ -91,95 +136,39 @@
   -o-border-radius: 1rem;
 }
 .things {
-  background-color: antiquewhite;
+  height: 30rem;
+  flex-grow: 1;
+  background-color: #e5d8ff;
   border-radius: 1rem;
+  font-size: 1.5rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
   padding: 3rem;
-  color: black;
+  color: #6f7373;
 }
+
+/* END OF HERO SECTION */
 
 .boxes {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 .box {
   display: flex;
   gap: 1rem;
   flex-direction: column;
   align-items: start;
-  width: 20rem;
-  padding: 1rem;
+  flex-grow: 1;
+  padding: 1.5rem;
   border-radius: 1rem;
   color: white;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-}
-
-.infoBox {
-  display: flex;
-  background-color: #483eff;
-  align-items: center;
-  margin: auto;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  width: fit-content;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
-
-.tab {
-  cursor: pointer;
-  color: white;
-  padding: 1rem;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-  border: 2px solid white;
-  margin: 1rem;
-}
-
-.active {
-  border: 2px solid aquamarine;
-  color: black;
-  background-color: aquamarine;
-}
-.infoCard {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 3rem;
-  background-color: white;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
-
-.assistBtn {
-  position: fixed;
-  bottom: 1%;
-  right: 1%;
-  padding: 1rem;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  cursor: pointer;
-  z-index: 10;
 }
 
 .b1 {
@@ -193,4 +182,182 @@
 }
 .b4 {
   background-color: black;
+}
+
+/* END OF BOXES */
+
+.infoBox {
+  display: flex;
+  background-color: #483eff;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tab {
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  border: 2px solid white;
+}
+
+.tab.active {
+  border: 2px solid #bce0f6;
+  color: black;
+  background-color: #bce0f6;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.infoFields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 1rem;
+}
+.info h1 {
+  font-size: 2rem;
+}
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.arrowRight {
+  width: 1.5rem;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-end;
+  gap: 0.3rem;
+  padding: 0.75rem 2rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.assistBtn {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.66);
+  backdrop-filter: blur(2rem);
+  cursor: pointer;
+  z-index: 10;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.assistBtn img {
+  width: 3rem;
+}
+
+/* SHADOW */
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 900px) {
+  .middle {
+    display: none;
+  }
+
+  .nav {
+    padding: 1rem 2rem;
+  }
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .websiteBody {
+    padding: 2rem;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .computers img {
+    width: 100%;
+  }
+
+  .boxes {
+    flex-direction: column;
+  }
+
+  .tab {
+    padding: 1rem 0.75rem;
+    flex-grow: 1;
+  }
+  .tab h2 {
+    font-size: 1rem;
+  }
+  .tabs {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .infoBox {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .infoCard {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .assistBtn img {
+    width: 1.5rem;
+  }
+  .social img {
+    width: 1.5rem;
+  }
 }
