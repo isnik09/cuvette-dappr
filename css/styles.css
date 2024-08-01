@@ -316,7 +316,7 @@ input :focus {
   }
 
   .websiteBody {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .hero {
@@ -336,7 +336,7 @@ input :focus {
     flex-grow: 1;
   }
   .tab h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .tabs {
     flex-direction: row;
