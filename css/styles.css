@@ -93,7 +93,7 @@ input :focus {
   align-items: center;
   flex-direction: column;
   right: 2%;
-  top: 40%;
+  top: 30%;
   z-index: 10;
   width: fit-content;
   position: fixed;
